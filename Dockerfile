@@ -21,7 +21,8 @@ FROM base as production-deps
 WORKDIR /myapp
 
 COPY --from=deps /myapp/node_modules /myapp/node_modules
-ADD package.json package-lock.json ./
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+ADD package*.json ./
 RUN npm prune --production
 
 # Build the app
