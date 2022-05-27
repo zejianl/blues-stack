@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-gradient-to-r from-purple-500
+    }
+}
+
+@layer components {
+    .primary-button {
+        @apply bg-lime-500 hover:bg-lime-700 active:bg-lime-700 text-white font-bold uppercase w-20 px-4 py-2 rounded-md mt-3 
+    }
+}
